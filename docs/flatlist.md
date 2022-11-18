@@ -291,8 +291,12 @@ const DATA = [
 ];
 
 const Item = ({item, onPress, backgroundColor, textColor}) => (
-  <TouchableOpacity onPress={onPress} style={[styles.item, {backgroundColor}]}>
-    <Text style={[styles.title, {color: textColor}]}>{item.title}</Text>
+  <TouchableOpacity
+    onPress={onPress}
+    style={[styles.item, {backgroundColor}]}>
+    <Text style={[styles.title, {color: textColor}]}>
+      {item.title}
+    </Text>
   </TouchableOpacity>
 );
 
@@ -300,7 +304,8 @@ const App = () => {
   const [selectedId, setSelectedId] = useState();
 
   const renderItem = ({item}) => {
-    const backgroundColor = item.id === selectedId ? '#6e3b6e' : '#f9c2ff';
+    const backgroundColor =
+      item.id === selectedId ? '#6e3b6e' : '#f9c2ff';
     const color = item.id === selectedId ? 'white' : 'black';
 
     return (

@@ -51,7 +51,9 @@ import React from 'react';
 import {View, StyleSheet, TextInput} from 'react-native';
 
 const UselessTextInputMultiline = () => {
-  const [value, onChangeText] = React.useState('Useless Multiline Placeholder');
+  const [value, onChangeText] = React.useState(
+    'Useless Multiline Placeholder'
+  );
 
   // If you type something in the text box that is a color, the background will change to that
   // color.

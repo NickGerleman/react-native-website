@@ -20,8 +20,13 @@ Do not use unless you have a very good reason. All elements that respond to pres
 ## Example
 
 ```SnackPlayer name=TouchableWithoutFeedback
-import React, { useState } from "react";
-import { StyleSheet, TouchableWithoutFeedback, Text, View } from "react-native";
+import React, {useState} from 'react';
+import {
+  StyleSheet,
+  TouchableWithoutFeedback,
+  Text,
+  View,
+} from 'react-native';
 
 const TouchableWithoutFeedbackExample = () => {
   const [count, setCount] = useState(0);
@@ -42,26 +47,26 @@ const TouchableWithoutFeedbackExample = () => {
       </TouchableWithoutFeedback>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    paddingHorizontal: 10
+    justifyContent: 'center',
+    paddingHorizontal: 10,
   },
   button: {
-    alignItems: "center",
-    backgroundColor: "#DDDDDD",
-    padding: 10
+    alignItems: 'center',
+    backgroundColor: '#DDDDDD',
+    padding: 10,
   },
   countContainer: {
-    alignItems: "center",
-    padding: 10
+    alignItems: 'center',
+    padding: 10,
   },
   countText: {
-    color: "#FF00FF"
-  }
+    color: '#FF00FF',
+  },
 });
 
 export default TouchableWithoutFeedbackExample;
