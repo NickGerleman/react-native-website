@@ -12,17 +12,9 @@ Do not use unless you have a very good reason. All elements that respond to pres
 ## Usage Pattern
 
 ```jsx
-function MyComponent(props) {
-  return (
-    <View {...props} style={{ flex: 1, backgroundColor: '#fff' }}>
-      <Text>My Component</Text>
-    </View>
-  );
-}
-
 <TouchableWithoutFeedback onPress={() => alert('Pressed!')}>
   <MyComponent />
-</TouchableWithoutFeedback>;
+</TouchableWithoutFeedback>
 ```
 
 ## Example

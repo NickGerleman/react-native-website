@@ -14,20 +14,12 @@ The underlay comes from wrapping the child in a new View, which can affect layou
 TouchableHighlight must have one child (not zero or more than one). If you wish to have several child components, wrap them in a View.
 
 ```jsx
-function MyComponent(props) {
-  return (
-    <View {...props} style={{ flex: 1, backgroundColor: '#fff' }}>
-      <Text>My Component</Text>
-    </View>
-  );
-}
-
 <TouchableHighlight
   activeOpacity={0.6}
   underlayColor="#DDDDDD"
   onPress={() => alert('Pressed!')}>
   <MyComponent />
-</TouchableHighlight>;
+</TouchableHighlight>
 ```
 
 ## Example
@@ -86,18 +78,17 @@ export default TouchableHighlightExample;
 <TabItem value="classical">
 
 ```SnackPlayer name=TouchableHighlight%20Class%20Component%20Example
-import React, { Component } from "react";
-import { StyleSheet, Text, TouchableHighlight, View } from "react-native";
+import React, {Component} from 'react';
+import {StyleSheet, Text, TouchableHighlight, View} from 'react-native';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { count: 0 };
-  }
+  state = {
+    count: 0,
+  };
 
   onPress = () => {
     this.setState({
-      count: this.state.count + 1
+      count: this.state.count + 1,
     });
   };
 
@@ -122,21 +113,21 @@ class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    paddingHorizontal: 10
+    justifyContent: 'center',
+    paddingHorizontal: 10,
   },
   button: {
-    alignItems: "center",
-    backgroundColor: "#DDDDDD",
-    padding: 10
+    alignItems: 'center',
+    backgroundColor: '#DDDDDD',
+    padding: 10,
   },
   countContainer: {
-    alignItems: "center",
-    padding: 10
+    alignItems: 'center',
+    padding: 10,
   },
   countText: {
-    color: "#FF00FF"
-  }
+    color: '#FF00FF',
+  },
 });
 
 export default App;

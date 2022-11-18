@@ -55,32 +55,26 @@ export default TextInANest;
 <TabItem value="classical">
 
 ```SnackPlayer name=Text%20Class%20Component%20Example
-import React, { Component } from "react";
-import { Text, StyleSheet } from "react-native";
+import React, {Component} from 'react';
+import {Text, StyleSheet} from 'react-native';
 
 class TextInANest extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      titleText: "Bird's Nest",
-      bodyText: "This is not really a bird nest."
-    };
-  }
+  state = {
+    titleText: "Bird's Nest",
+    bodyText: 'This is not really a bird nest.',
+  };
 
   onPressTitle = () => {
-    this.setState({ titleText: "Bird's Nest [pressed]" });
+    this.setState({titleText: "Bird's Nest [pressed]"});
   };
 
   render() {
     return (
       <Text style={styles.baseText}>
-        <Text
-          style={styles.titleText}
-          onPress={this.onPressTitle}
-        >
+        <Text style={styles.titleText} onPress={this.onPressTitle}>
           {this.state.titleText}
-          {"\n"}
-          {"\n"}
+          {'\n'}
+          {'\n'}
         </Text>
         <Text numberOfLines={5}>{this.state.bodyText}</Text>
       </Text>
@@ -90,12 +84,12 @@ class TextInANest extends Component {
 
 const styles = StyleSheet.create({
   baseText: {
-    fontFamily: "Cochin"
+    fontFamily: 'Cochin',
   },
   titleText: {
     fontSize: 20,
-    fontWeight: "bold"
-  }
+    fontWeight: 'bold',
+  },
 });
 
 export default TextInANest;

@@ -32,11 +32,17 @@ const androidLanguages = [
 ];
 const defaultAndroidLanguage = 'java';
 
-const javaScriptSpecLanguages = [
-  {label: 'Flow', value: 'flow'},
+const specLanguages = [
   {label: 'TypeScript', value: 'typescript'},
+  {label: 'Flow', value: 'flow'},
 ];
-const defaultJavaScriptSpecLanguages = 'flow';
+const defaultSpecLanguage = 'typescript';
+
+const jsExampleLanguages = [
+  {label: 'TypeScript', value: 'typescript'},
+  {label: 'JavaScript', value: 'javascript'},
+];
+const defaultJSExampleLanguage = 'typescript';
 
 const guides = [
   {label: 'Expo Go Quickstart', value: 'quickstart'},
@@ -72,7 +78,7 @@ export default {
   defaultPlatform,
   defaultSyntax,
   defaultAndroidLanguage,
-  defaultJavaScriptSpecLanguages,
+  defaultSpecLanguage,
   getDevNotesTabs,
   guides,
   oses,
@@ -80,5 +86,7 @@ export default {
   platforms,
   syntax,
   androidLanguages,
-  javaScriptSpecLanguages,
+  specLanguages,
+  jsExampleLanguages,
+  defaultJSExampleLanguage,
 };

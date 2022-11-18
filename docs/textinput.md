@@ -8,12 +8,11 @@ A foundational component for inputting text into the app via a keyboard. Props p
 The most basic use case is to plop down a `TextInput` and subscribe to the `onChangeText` events to read the user input. There are also other events, such as `onSubmitEditing` and `onFocus` that can be subscribed to. A minimal example:
 
 ```SnackPlayer name=TextInput
-import React from "react";
-import { SafeAreaView, StyleSheet, TextInput } from "react-native";
+import React from 'react';
+import {SafeAreaView, StyleSheet, TextInput} from 'react-native';
 
 const UselessTextInput = () => {
-  const [text, onChangeText] = React.useState("Useless Text");
-  const [number, onChangeNumber] = React.useState(null);
+  const [text, onChangeText] = React.useState('Useless Text');
 
   return (
     <SafeAreaView>
@@ -24,9 +23,7 @@ const UselessTextInput = () => {
       />
       <TextInput
         style={styles.input}
-        onChangeText={onChangeNumber}
-        value={number}
-        placeholder="useless placeholder"
+        placeholder="placeholder"
         keyboardType="numeric"
       />
     </SafeAreaView>
@@ -51,17 +48,7 @@ Note that some props are only available with `multiline={true/false}`. Additiona
 
 ```SnackPlayer name=TextInput
 import React from 'react';
-import { View, TextInput } from 'react-native';
-
-const UselessTextInput = (props) => {
-  return (
-    <TextInput
-      {...props} // Inherit any props passed to it; e.g., multiline, numberOfLines below
-      editable
-      maxLength={40}
-    />
-  );
-}
+import {View, StyleSheet, TextInput} from 'react-native';
 
 const UselessTextInputMultiline = () => {
   const [value, onChangeText] = React.useState('Useless Multiline Placeholder');
@@ -70,21 +57,34 @@ const UselessTextInputMultiline = () => {
   // color.
   return (
     <View
-      style={{
-        backgroundColor: value,
-        borderBottomColor: '#000000',
-        borderBottomWidth: 1,
-      }}>
-      <UselessTextInput
+      style={[
+        styles.container,
+        {
+          backgroundColor: value,
+        },
+      ]}>
+      <TextInput
         multiline
+        editable
         numberOfLines={4}
         onChangeText={text => onChangeText(text)}
         value={value}
-        style={{padding: 10}}
+        style={styles.input}
+        maxLength={40}
       />
     </View>
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    borderBottomColor: '#000000',
+    borderBottomWidth: 1,
+  },
+  input: {
+    padding: 10,
+  },
+});
 
 export default UselessTextInputMultiline;
 ```

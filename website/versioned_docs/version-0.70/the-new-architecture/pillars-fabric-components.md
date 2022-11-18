@@ -66,7 +66,7 @@ There are two requirements the file containing this specification must meet:
 
 Below are specifications of the `RTNCenteredText` component in both Flow and TypeScript. Create a `RTNCenteredText` file with the proper extension in the `js` folder.
 
-<Tabs groupId="fabric-component-specs" defaultValue={constants.defaultJavaScriptSpecLanguages} values={constants.javaScriptSpecLanguages}>
+<Tabs groupId="fabric-component-specs" defaultValue={constants.defaultSpecLanguage} values={constants.specLanguages}>
 <TabItem value='flow'>
 
 ```typescript
